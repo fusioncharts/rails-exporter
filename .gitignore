@@ -1,3 +1,7 @@
 .bundle/
 log/*.log
 pkg/
+*.sqlite3
+*.log
+spec/test_app/tmp/fusioncharts
+spec/test_app/config/fusioncharts_exporter.yml

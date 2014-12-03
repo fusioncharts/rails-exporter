@@ -9,7 +9,7 @@ require "sprockets/railtie"
 # require "rails/test_unit/railtie"
 
 Bundler.require(*Rails.groups)
-require "dummy"
+require "fusioncharts_exporter"
 
 module TestApp
   class Application < Rails::Application

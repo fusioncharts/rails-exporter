@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
 
-  mount Dummy::Engine => "/dummy"
+  mount FusionchartsExporter::Engine => "/fusioncharts_exporter"
 end
