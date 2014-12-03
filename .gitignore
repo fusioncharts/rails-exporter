@@ -5,3 +5,4 @@ pkg/
 *.log
 spec/test_app/tmp/fusioncharts
 spec/test_app/config/fusioncharts_exporter.yml
+spec/test_app/public/fusioncharts

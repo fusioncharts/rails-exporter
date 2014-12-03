@@ -47,7 +47,6 @@ module FusionchartsExporter
 
     def save
       dest = get_destination
-      p dest
       stat = FileUtils.mv(get_download_filename, dest)
 
       @remove_files.reject!{ |f| f === get_download_filename }
@@ -112,6 +111,12 @@ module FusionchartsExporter
       end
     end
 
+    def setRootPath(path)
+      @root_path = path
+
+      self
+    end
+
     private
 
     # Get the full download filename with the path
@@ -148,7 +153,7 @@ module FusionchartsExporter
 
     # Get the absoulte save path where the file be saved on the server
     def get_destination
-      File.join(Rails.root, @config['save_path'], @random_filename + "." + @options['exportformat'])
+      File.join(@root_path, @config['save_path'], @random_filename + "." + @options['exportformat'])
     end
 
   end

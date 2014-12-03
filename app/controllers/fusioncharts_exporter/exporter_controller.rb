@@ -6,16 +6,14 @@ module FusionchartsExporter
     # The action that controls the export
     def index
       @exporter = Export.new
+      @exporter.setRootPath(Rails.root)
       @exporter.setConfigFile(File.join(Rails.root, "config", "fusioncharts_exporter.yml"))
       @exporter.setParams(params)
       @exporter.process_image
-      # config = YAML.load_file(File.join(Rails.root, "config", "fusioncharts_exporter.yml"))
-      # @exporter = FusionchartsExporter::Base.new(config, params)
-      # @options = @exporter.get_options
 
-      return save if @exporter.downloadable?
+      return download if @exporter.downloadable?
 
-      # return save if @exporter.saveable?
+      return save if @exporter.saveable?
 
     end
 
