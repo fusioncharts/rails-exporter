@@ -1,5 +1,4 @@
 module FusionchartsExporter
-
   class Export
 
     # Path where all temporary images will be stored.
@@ -151,7 +150,6 @@ module FusionchartsExporter
     def get_destination
       File.join(Rails.root, @config['save_path'], @random_filename + "." + @options['exportformat'])
     end
-
+    
   end
-
-end 
+end
