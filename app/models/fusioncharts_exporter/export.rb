@@ -46,11 +46,16 @@ module FusionchartsExporter
     end
 
     def save
-      dest = get_destination
-      stat = FileUtils.mv(get_download_filename, dest)
+      begin
+        dest = get_destination
+        FileUtils.mv(get_download_filename, dest)
+
+        stat = true
+      rescue 
+        stat = false
+      end
 
       @remove_files.reject!{ |f| f === get_download_filename }
-
       self.remove_files
 
       if stat

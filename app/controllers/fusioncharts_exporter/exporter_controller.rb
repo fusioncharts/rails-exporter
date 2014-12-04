@@ -30,11 +30,9 @@ module FusionchartsExporter
 
     # Save helper
     def save
-      if @exporter.save
-        return render :json => { "success" => true }
-      end
-
-      return render :json => { "success" => false }
+      status = @exporter.save
+      
+      render :json => { "success" => status }
     end
 
   end
