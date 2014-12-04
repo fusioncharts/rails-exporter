@@ -1,6 +1,6 @@
 # Fusioncharts Exporter Handler
 
-Export handler for Ruby on Rails.
+FusionCharts export handler for Ruby on Rails.
 
 ## Installation
 
@@ -14,10 +14,21 @@ And then execute:
 $ bundle
 ~~~
 
+## Introduction
+
+### What is it?
+FusionCharts Suite XT uses JavaScript to generate charts in the browser, using SVG and VML (for older IE). If you need to export the charts as images or PDF, you need a server-side helper library to convert the SVG to image/PDF. These export handlers allow you to take the SVG from FusionCharts charts and convert to image/PDF.
+
+### How does the export handler work?
+- A chart is generated in the browser. When the export to image or PDF button is clicked, the chart generates the SVG string to represent the current state and sends to the export handler. The export handler URL is configured via chart attributes.
+- The export handler accepts the SVG string along with chart configuration like chart type, width, height etc., and uses [InkScape](https://inkscape.org/en/) and [ImageMagick](http://www.imagemagick.org/) library to convert to image or PDF.
+- The export handler either writes the image or PDF to disk, based on the configuration provided by chart, or streams it back to the browser.
+
 ## Pre-requisites
 You will have to install the following applications without which the exporter will fail to run.
-- [Inkscape](https://inkscape.org/)
-- [ImageMagick](http://www.imagemagick.org/)
+- [Inkscape](http://inkscape.org/en/download/)
+- [ImageMagick](http://www.imagemagick.org/script/download.php
+)
 
 ## Usage
 The gem provides a generator to create a some configuration files and directories. Run the following:
@@ -55,3 +66,9 @@ For eg., if you want your export server hosted at `http://<my-website>/export`, 
 ~~~
 mount FusionchartsExporter::Engine, at: "export"
 ~~~
+
+## Contributing and Testing
+
+1. Clone the repository: `TODO`
+2. Run `bundle install`
+3. Run `rspec` for running all the testcases.
