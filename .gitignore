@@ -8,3 +8,4 @@ spec/test_app/config/fusioncharts_exporter.yml
 spec/test_app/public/fusioncharts
 coverage/
 Gemfile.lock
+*.gem
