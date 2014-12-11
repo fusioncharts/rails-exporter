@@ -1,5 +1,7 @@
 # Fusioncharts Exporter Handler
 
+[![Gem Version](https://badge.fury.io/rb/fusioncharts_exporter.svg)](http://badge.fury.io/rb/fusioncharts_exporter)
+
 FusionCharts export handler for Ruby on Rails.
 
 ## Installation
