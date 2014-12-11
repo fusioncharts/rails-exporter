@@ -9,9 +9,9 @@ Gem::Specification.new do |s|
   s.version     = FusionchartsExporter::VERSION
   s.authors     = ["FusionCharts"]
   s.email       = ["mail@labs.fusioncharts.com"]
-  s.homepage    = "htttp://www.fusioncharts.com"
+  s.homepage    = "https://github.com/fusioncharts/rails-exporter"
   s.summary     = "Fusioncharts Export Handler."
-  s.description = "Fusioncharts Export Handler."
+  s.description = "Rails engine to export fusioncharts into image and pdf."
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
