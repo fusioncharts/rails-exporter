@@ -69,6 +69,6 @@ mount FusionchartsExporter::Engine, at: "export"
 
 ## Contributing and Testing
 
-1. Clone the repository: `TODO`
+1. Fork / Clone the repository.
 2. Run `bundle install`
 3. Run `rspec` for running all the testcases.
